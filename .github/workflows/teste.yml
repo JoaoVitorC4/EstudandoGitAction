@@ -1,7 +1,7 @@
 name: Estudando 
 on: [push]
 jobs:
-  check-angular-version:
+  Angular:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -10,3 +10,14 @@ jobs:
           node-version: '16'
       - run: npm install -g @angular/cli
       - run: ng --version
+  
+    Ionic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - run: npm install -g @ionic/cli
+      - run: ionic --version
+    
