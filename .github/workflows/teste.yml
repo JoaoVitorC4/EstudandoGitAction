@@ -1,13 +1,12 @@
-name: Instala Ionic
+name: Estudando 
 on: [push]
 jobs:
-  ionic:
+  check-angular-version:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-        with:
+      - with:
           node-version: '16'
-      - run: npm install -g @ionic/cli
-      - run: ionic --version
-    
+      - run: npm install -g @angular/cli
+      - run: ng --version
